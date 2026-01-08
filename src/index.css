@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Frankenstein Gothic Design System */
+/* All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Frankenstein Green Theme Colors - Dark Theme */
+    --background: 120 20% 8%;
+    --foreground: 120 30% 85%;
+
+    --card: 120 25% 12%;
+    --card-foreground: 120 30% 85%;
+
+    --popover: 120 30% 10%;
+    --popover-foreground: 120 30% 85%;
+
+    --primary: 120 60% 50%;
+    --primary-foreground: 120 20% 8%;
+    --primary-glow: 120 70% 65%;
+
+    --secondary: 150 40% 30%;
+    --secondary-foreground: 120 30% 85%;
+
+    --muted: 120 25% 15%;
+    --muted-foreground: 120 15% 60%;
+
+    --accent: 90 50% 45%;
+    --accent-foreground: 120 30% 85%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 120 30% 85%;
+
+    --border: 120 25% 20%;
+    --input: 120 25% 15%;
+    --ring: 120 60% 50%;
+
+    --radius: 0.75rem;
+
+    /* Frankenstein Green Design Tokens */
+    --frankenstein-green: 120 60% 50%;
+    --electric-green: 120 80% 60%;
+    --dark-forest: 120 40% 15%;
+    --toxic-green: 90 70% 45%;
+    --lightning-green: 120 100% 70%;
+    --shadow-green: 120 30% 5%;
+
+    /* Gradients */
+    --gradient-frankenstein: linear-gradient(135deg, hsl(var(--background)), hsl(var(--shadow-green)));
+    --gradient-electric: linear-gradient(45deg, hsl(var(--lightning-green)), hsl(var(--primary)));
+    --gradient-toxic: linear-gradient(180deg, hsl(var(--toxic-green)), hsl(var(--accent)));
+    --gradient-laboratory: linear-gradient(90deg, hsl(var(--dark-forest)), hsl(var(--background)));
+    
+    /* Background Gradients for Sections */
+    --bg-hero: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('/images/frankenstein-netflix-movie-2k-wallpaper-uhdpaper.com-43@5@k.jpg');
+    --bg-characters: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('/images/frankenstein-netflix-movie-2k-wallpaper-uhdpaper.com-43@5@k.jpg');
+    --bg-themes: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('/images/frankenstein-laboratory-netflix-2k-wallpaper-uhdpaper.com-546@5@j.jpg');
+    --bg-context: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('/images/thumb-1920-1401577.jpg');
+    --bg-reflection: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('/images/577930100_1273343354819720_2470801794486566649_n.jpg');
+    --bg-ethics: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('/images/579632715_1273342801486442_4968998177808603409_n.jpg');
+
+    /* Shadows */
+    --shadow-frankenstein: 0 20px 40px -10px hsl(var(--shadow-green) / 0.8);
+    --shadow-electric: 0 0 30px hsl(var(--lightning-green) / 0.6);
+    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.4);
+    --shadow-toxic: 0 0 25px hsl(var(--toxic-green) / 0.5);
+
+    /* Animations */
+    --transition-frankenstein: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-electric: all 0.2s ease-in-out;
+    --transition-pulse: all 0.6s ease-in-out;
+
+    /* Sidebar */
+    --sidebar-background: 120 25% 10%;
+    --sidebar-foreground: 120 30% 85%;
+    --sidebar-primary: 120 60% 50%;
+    --sidebar-primary-foreground: 120 20% 8%;
+    --sidebar-accent: 120 25% 15%;
+    --sidebar-accent-foreground: 120 30% 85%;
+    --sidebar-border: 120 25% 20%;
+    --sidebar-ring: 120 60% 50%;
+
+    /* Charts */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* Light mode */
+  .light {
+    --background: 45 50% 95%;
+    --foreground: 220 15% 15%;
+    --card: 45 30% 90%;
+    --card-foreground: 220 15% 15%;
+    --primary: 220 15% 20%;
+    --primary-foreground: 45 100% 85%;
+  }
+
+  /* Dark mode overrides */
+  .dark {
+    --background: 120 20% 8%;
+    --foreground: 120 30% 85%;
+    --card: 120 25% 12%;
+    --card-foreground: 120 30% 85%;
+    --popover: 120 30% 10%;
+    --popover-foreground: 120 30% 85%;
+    --primary: 120 60% 50%;
+    --primary-foreground: 120 20% 8%;
+    --secondary: 150 40% 30%;
+    --secondary-foreground: 120 30% 85%;
+    --muted: 120 25% 15%;
+    --muted-foreground: 120 15% 60%;
+    --accent: 90 50% 45%;
+    --accent-foreground: 120 30% 85%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 120 30% 85%;
+    --border: 120 25% 20%;
+    --input: 120 25% 15%;
+    --ring: 120 60% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Crimson Text', serif;
+    background-image: var(--gradient-frankenstein);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Typography */
+  .font-gothic { font-family: 'Creepster', cursive; }
+  .font-horror { font-family: 'Nosifer', cursive; }
+  .font-elegant { font-family: 'Cinzel', serif; }
+  .font-body { font-family: 'Crimson Text', serif; }
+
+  /* Animations */
+  @keyframes gentle-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.2); transform: scale(1); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.4); transform: scale(1.01); }
+  }
+
+  @keyframes subtle-pulse { 0%, 100% { opacity: 0.8; } 50% { opacity: 1; } }
+  @keyframes float-up { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+  @keyframes electric-flash { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.02); } }
+  @keyframes frankenstein-glow { 0%, 100% { box-shadow: var(--shadow-glow); } 50% { box-shadow: 0 0 80px hsl(var(--primary) / 0.8); } }
+  @keyframes toxic-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--toxic-green) / 0.3); transform: scale(1); }
+    50% { box-shadow: 0 0 40px hsl(var(--toxic-green) / 0.7); transform: scale(1.02); }
+  }
+  @keyframes card-hover { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(-5px) scale(1.02); } }
+  @keyframes text-glow {
+    0%, 100% { text-shadow: 2px 2px 6px hsl(var(--shadow-green)); }
+    50% { text-shadow: 2px 2px 12px hsl(var(--primary) / 0.6); }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes scroll-reveal {
+    from { opacity: 0; transform: translateY(50px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Animation Classes */
+  .animate-gentle-glow { animation: gentle-glow 4s infinite; }
+  .animate-subtle-pulse { animation: subtle-pulse 3s infinite; }
+  .animate-float-up { animation: float-up 6s infinite; }
+  .animate-electric { animation: electric-flash 4s infinite; }
+  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
+  .animate-slide-in-left { animation: slide-in-left 0.8s ease-out; }
+  .scroll-animate { transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+  /* Frankenstein Utility Classes */
+  .text-shadow-frankenstein { text-shadow: 2px 2px 6px hsl(var(--shadow-green)); }
+  .shadow-frankenstein { box-shadow: var(--shadow-frankenstein); }
+  .shadow-electric { box-shadow: var(--shadow-electric); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-toxic { box-shadow: var(--shadow-toxic); }
+
+  .bg-frankenstein-gradient { background-image: var(--gradient-frankenstein); }
+  .bg-electric-gradient { background-image: var(--gradient-electric); }
+  .bg-toxic-gradient { background-image: var(--gradient-toxic); }
+  .bg-laboratory-gradient { background-image: var(--gradient-laboratory); }
+
+  /* Section Background Images */
+  .bg-hero {
+    background-image: var(--bg-hero);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .bg-characters, .bg-themes, .bg-context, .bg-reflection, .bg-ethics {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .bg-characters { background-image: var(--bg-characters); }
+  .bg-themes { background-image: var(--bg-themes); }
+  .bg-context { background-image: var(--bg-context); }
+  .bg-reflection { background-image: var(--bg-reflection); }
+  .bg-ethics { background-image: var(--bg-ethics); }
+
+  /* Border Styles */
+  .border-frankenstein { border-color: hsl(var(--primary) / 0.3); }
+  .border-electric { border-color: hsl(var(--lightning-green) / 0.5); }
+  .border-toxic { border-color: hsl(var(--toxic-green) / 0.4); }
+
+  /* Text Colors */
+  .text-electric-green { color: hsl(var(--electric-green)); }
+  .text-toxic-green { color: hsl(var(--toxic-green)); }
+  .text-lightning-green { color: hsl(var(--lightning-green)); }
+
+  /* Background Colors */
+  .bg-electric-green { background-color: hsl(var(--electric-green)); }
+  .bg-toxic-green { background-color: hsl(var(--toxic-green)); }
+  .bg-lightning-green { background-color: hsl(var(--lightning-green)); }
+  .bg-shadow-green { background-color: hsl(var(--shadow-green)); }
+
+  /* Hover Effects */
+  .hover-glow:hover { box-shadow: var(--shadow-glow); transition: var(--transition-frankenstein); }
+  .hover-electric:hover { box-shadow: var(--shadow-electric); transition: var(--transition-electric); }
+  .hover-toxic:hover { box-shadow: var(--shadow-toxic); transition: var(--transition-pulse); }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.8); }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  /* Focus Styles */
+  .focus-frankenstein:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .font-horror { font-size: clamp(2rem, 8vw, 6rem); }
+    .font-gothic { font-size: clamp(1.5rem, 6vw, 4rem); }
+  }
+
+  /* Print Styles */
+  @media print {
+    .bg-hero, .bg-characters, .bg-themes, .bg-context, .bg-reflection, .bg-ethics {
+      background-image: none !important;
+      background-color: white !important;
+    }
+    .text-primary, .text-secondary, .text-accent { color: black !important; }
+  }
+}
+
+@layer components {
+  .frankenstein-card {
+    @apply bg-card/90 backdrop-blur-sm border-frankenstein shadow-frankenstein hover:shadow-electric transition-all duration-300;
+  }
+
+  .frankenstein-button {
+    @apply bg-primary hover:bg-primary/80 text-primary-foreground font-elegant shadow-glow hover:shadow-electric transition-all duration-300 rounded-lg;
+  }
+
+  .frankenstein-input {
+    @apply bg-input border-frankenstein focus:border-primary focus:ring-2 focus:ring-primary/20 text-foreground placeholder:text-muted-foreground rounded-lg;
+  }
+
+  .frankenstein-badge {
+    @apply bg-primary/20 text-primary border border-primary/30 font-elegant px-3 py-1 rounded-full text-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}
