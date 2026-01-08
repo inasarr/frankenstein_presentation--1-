@@ -70,9 +70,9 @@
     --shadow-toxic: 0 0 25px hsl(var(--toxic-green) / 0.5);
 
     /* Animations */
-    --transition-frankenstein: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-frankenstein: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-electric: all 0.2s ease-in-out;
-    --transition-pulse: all 0.6s ease-in-out;
+    --transition-pulse: all 0.2s ease-in-out;
 
     /* Sidebar */
     --sidebar-background: 120 25% 10%;
@@ -182,7 +182,7 @@
   /* Animation Classes */
   .animate-gentle-glow { animation: gentle-glow 4s infinite; }
   .animate-subtle-pulse { animation: subtle-pulse 3s infinite; }
-  .animate-float-up { animation: float-up 6s infinite; }
+  .animate-float-up { animation: float-up 3s infinite; }
   .animate-electric { animation: electric-flash 4s infinite; }
   .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
   .animate-slide-in-left { animation: slide-in-left 0.8s ease-out; }
