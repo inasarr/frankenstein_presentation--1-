@@ -180,10 +180,10 @@
   }
 
   /* Animation Classes */
-  .animate-gentle-glow { animation: gentle-glow 4s infinite; }
-  .animate-subtle-pulse { animation: subtle-pulse 3s infinite; }
-  .animate-float-up { animation: float-up 3s infinite; }
-  .animate-electric { animation: electric-flash 4s infinite; }
+  .animate-gentle-glow { animation: gentle-glow 2s infinite; }
+  .animate-subtle-pulse { animation: subtle-pulse 2s infinite; }
+  .animate-float-up { animation: float-up 2s infinite; }
+  .animate-electric { animation: electric-flash 2s infinite; }
   .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
   .animate-slide-in-left { animation: slide-in-left 0.8s ease-out; }
   .scroll-animate { transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
