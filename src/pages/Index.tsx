@@ -46,7 +46,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto text-center">
             <div className={`transition-all duration-2000 ${isVisible('hero') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
               <h1 className="font-horror mb-8 animate-text-glow text-center text-primary text-shadow-frankenstein w-full" style={{
-                fontSize: '120px',
+                fontSize: '100px',
                 textAlign: 'center'
               }}>
                 FRANKENSTEIN
