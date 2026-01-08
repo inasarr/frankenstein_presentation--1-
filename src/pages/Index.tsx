@@ -277,7 +277,47 @@ const Index = () => {
             </h2>
             
             
-
+              {/* Isolation and Solitude */}
+              <Card className={`mb-10 bg-card/90 backdrop-blur-sm border-frankenstein shadow-frankenstein hover:animate-card-hover transition-all duration-2000 ${isVisible('themes') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+                <CardHeader>
+                  <CardTitle className="font-elegant text-5xl text-center text-primary">
+                    🏰 Isolation and Solitude
+                  </CardTitle>
+                  <CardDescription className="text-xl text-center">Separation from society</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <img src="./images/frankenstein-2025-1200-1200-675-675-crop-000000.jpg" alt="Isolation" className="w-full rounded-lg shadow-frankenstein animate-gentle-flicker h-[256px] object-cover" />
+                  
+                  <p className="text-xl md:text-1xl leading-relaxed">
+                       In Frankenstein (2025), isolation is not merely a physical state but a metaphysical prison that traps both the creator and the creation. The director has described the story as one of the most "powerful portraits of loneliness" ever written, focusing on the tortured bond between two beings condemned by their own nature—one by hubris and the other by appearance.
+                  </p>
+                  <div className="space-y-6">
+                    <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
+                      <h4 className="font-elegant text-2xl text-primary mb-4">Victor's Isolation</h4>
+                      <p className="text-lg mb-4">Victor’s isolation is self-imposed, fueled by his "titanic egocentrism" and his conviction that he is a visionary who must transcend natural laws. He retreats into a "deliriously phallic tower" to conduct his experiments, a setting that serves as a visual metaphor for his attempt to assert masculine dominance over nature while severing all ties to his family and the medical community. Even when offered partnership, he remains emotionally detached, unable to grasp the human connections he is systematically destroying</p>
+                      <blockquote className="italic text-lg border-l-2 border-primary/50 pl-4 text-muted-foreground bg-muted/20 p-4 rounded mb-4">
+                        "I work alone."
+                      </blockquote>
+                      <div className="bg-primary/10 p-4 rounded">
+                        <p className="text-base font-semibold text-primary mb-2">Meaning:</p>
+                        <p className="text-base">This brief but definitive statement captures Victor's intellectual arrogance. By choosing to work in total secrecy and solitude, he intentionally removes himself from the ethical oversight and moral grounding of society. His isolation becomes the breeding ground for his madness, as he prioritizes the "miracle" of animation over the responsibility of care, eventually realizing too late that his pursuit of the "edge of the Earth" left him with no horizon and no human connection to return to.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-accent">
+                      <h4 className="font-elegant text-2xl text-accent mb-4">The Creature's Forced Solitude</h4>
+                      <p className="text-lg mb-4">Unlike Victor, the Creature’s isolation is a merciless punishment for his very existence. Abandoned at birth and described as a "wreckage, assembled from refuse," he is cast into a world that rejects him instinctively because of his monstrous form. He experiences the world as a "lonely child" who learns about humanity through observation from the shadows, wanting only to be seen and loved for his full self.</p>
+                      <blockquote className="italic text-lg border-l-2 border-accent/50 pl-4 text-muted-foreground bg-muted/20 p-4 rounded mb-4">
+                        "I cannot die. And I cannot live... alone."
+                      </blockquote>
+                      <div className="bg-accent/10 p-4 rounded">
+                        <p className="text-base font-semibold text-accent mb-2">Meaning:</p>
+                        <p className="text-base">This quote highlights the existential horror of the Creature’s condition: he has been granted immortality but denied belonging. His loneliness is not a choice but an inherited trauma passed down from a "bad father" who refused to nurture him. The realization that he is biologically incapable of the "sweet release of death" turns his solitude into an infinite sentence, driving him to demand a companion who can share his "language of exile".</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             
 
               {/* Light and Darkness */}
