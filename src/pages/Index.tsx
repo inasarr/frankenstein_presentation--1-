@@ -7,22 +7,51 @@ const Index = () => {
   const sectionRefs = useRef({});
 
   useEffect(() => {
+    // Fallback for environments without IntersectionObserver (old browsers / WebViews)
+    if (typeof IntersectionObserver === 'undefined') {
+      // Ensure at least the critical sections are visible so animations don't block rendering
+      setVisibleSections(prev => new Set([...prev, 'hero', 'introduction', 'characters', 'themes']));
+      console.warn('IntersectionObserver not supported - using fallback to mark sections visible');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.debug('IO entry', entry.target?.id, entry.isIntersecting);
           if (entry.isIntersecting) {
             setVisibleSections(prev => new Set([...prev, entry.target.id]));
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+      // Use a more permissive threshold/rootMargin for broader compatibility during debugging
+      { threshold: 0, rootMargin: '0px' }
     );
 
-    Object.values(sectionRefs.current).forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+    const observeAll = () => {
+      Object.values(sectionRefs.current).forEach((ref) => {
+        if (ref) {
+          try {
+            observer.observe(ref);
+          } catch (e) {
+            console.warn('Failed to observe element', ref, e);
+          }
+        }
+      });
+    };
 
-    return () => observer.disconnect();
+    // Observe initially and retry shortly after mount to handle timing issues
+    observeAll();
+    const retryTimer = setTimeout(observeAll, 300);
+
+    // Also attempt to re-observe on window resize/orientation change (helps some mobile webviews)
+    window.addEventListener('resize', observeAll);
+
+    return () => {
+      clearTimeout(retryTimer);
+      window.removeEventListener('resize', observeAll);
+      observer.disconnect();
+    };
   }, []);
 
   const isVisible = (sectionId) => visibleSections.has(sectionId);
